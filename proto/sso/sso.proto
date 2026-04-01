@@ -2,8 +2,7 @@ syntax = "proto3";
 
 package auth;
 
-option go_package = "salem.sso.v1.ssoy1";
-
+option go_package = "github.com/salemvi/auth_protos/gen/go/sso;ssov1";
 service Auth {
   rpc Register (RegisterRequest) returns (RegisterResponse);
   rpc Login (LoginRequest) returns (LoginResponse);
@@ -14,6 +13,7 @@ message RegisterRequest {
     string email = 1;
     string password = 2;
 }
+
 
 message RegisterResponse {
     int64 uses_id = 1;
